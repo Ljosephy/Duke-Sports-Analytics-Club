@@ -2,23 +2,81 @@
 
 {% block style %}
 <style>
-    body,
+    body {
+        background-image: url("static/homeBackground.jpg");
+        background-size: cover;
+    }
     h1,
     h2,
     h3,
     h4,
-    h5,
+    h5 {
+        position: fixed;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 275px;
+        margin-left: 275px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        font-family: "Karma", sans-serif;
+        font-weight: bolder;
+        font-size: 50px;
+        color: white;
+    }
     h6 {
         text-align: center;
         font-family: "Karma", sans-serif;
+        color: white;
+        font-size: 30px;
+    }
+    a.one:link, a.one:visited {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 3px;
+        font-family: "Karma", sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 660px;
+        margin-top: 545px;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a.one:hover, a.one:active {
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
     }
 
+    a.two:link, a.two:visited {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 3px;
+        font-family: "Karma", sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 20px;
+        vertical-align: middle;
+        margin-left: 675px;
+        margin-top: 385px;
+        padding: 10px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a.two:hover, a.two:active {
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+    }
+
+
     .w3-bar-block .w3-bar-item {
-        padding: 20px;
+        padding: 50px;
     }
 
     .logo {
-        position: absolute;
+        position: fixed;
         max-width: 15vh;
         max-height: 15vh;
         top: 0;
@@ -39,15 +97,22 @@ Duke Sports Analytics Club
 {% endblock %}
 
 {% block content %}
-<div class="content">
-    <a href="https://forms.gle/nskXF38NcSgS5V6p8">
+<h5>Welcome to Duke Sports Analytics Club!</h5>
+
+<a class="two" href="https://duke-sports-analytics-club.herokuapp.com/about">Learn More</a>
+
+<a class="one" href="https://forms.gle/nskXF38NcSgS5V6p8">Click here to join!</a>
+
+
+<!-- <div class="content">
+    <img src="{{ url_for('static', filename='homeBackground.jpg') }}" height="571" width="1000">
+<a href="https://forms.gle/nskXF38NcSgS5V6p8">
         <p>Click here to join</p>
-    </a>
-    <img src="{{ url_for('static', filename='homeBackground.jpg') }}">
+</a>
 </div>
 <br>
 <br>
 <div class="content">
     <p>Contact us: duke-sports-analytics-club@duke.edu</p>
-</div>
+</div> -->
 {% endblock %}
